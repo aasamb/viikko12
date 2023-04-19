@@ -1,4 +1,4 @@
-package com.example.viikko11;
+package com.example.viikko12;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -65,8 +65,4 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemViewHolder> {
         return items.size();
     }
 
-
-    public void notifyForItemAdded(int index)    {
-        notifyItemInserted(index);
-    }
 }

@@ -1,14 +1,16 @@
-package com.example.viikko11;
+package com.example.viikko12;
 
 import java.util.Date;
 
 public class Item {
     private String details;
     private Date date;
+    private boolean starred = false;
 
-    public Item(String item)    {
+    public Item(String item, boolean starred)    {
         this.details = item;
         this.date = new Date();
+        this.starred = starred;
     }
 
     public String getDetails() {
@@ -21,5 +23,9 @@ public class Item {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public boolean isStarred() {
+        return starred;
     }
 }

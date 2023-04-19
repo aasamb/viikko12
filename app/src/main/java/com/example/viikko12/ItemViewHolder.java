@@ -1,4 +1,4 @@
-package com.example.viikko11;
+package com.example.viikko12;
 
 import android.view.View;
 import android.widget.EditText;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.viikko12.R;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
     TextView itemDetails;

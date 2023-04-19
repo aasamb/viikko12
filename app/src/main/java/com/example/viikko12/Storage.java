@@ -1,4 +1,4 @@
-package com.example.viikko11;
+package com.example.viikko12;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,5 +44,21 @@ public class Storage {
 
     public void sortRecent()  {
         Collections.sort(items, Comparator.comparing(Item::getDate).thenComparing(Item::getDetails));
+    }
+
+
+
+    public String getStarredString()   {
+
+        StringBuilder sbStarred = new StringBuilder();
+        ArrayList<Item> itemsTemporary = items;
+        Collections.sort(itemsTemporary, Comparator.comparing(Item::getDate).thenComparing(Item::getDetails));
+
+        for (Item item : itemsTemporary) {
+            if (item.isStarred())   {
+                sbStarred.append(" - " + item.getDetails() + "\n");
+            }
+        }
+        return sbStarred.toString();
     }
 }
